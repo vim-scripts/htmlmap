@@ -1,0 +1,5 @@
+This is a mirror of http://www.vim.org/scripts/script.php?script_id=258
+
+This script defines a number of macros, all for insert mode in HTML files. Once installed, it will automatically "translate" characters into their &...; strings: so for instance if you type "ä" the characters " & a u m l ; " will be inserted (without the intervening spaces). A mechanism similar to Vim's "digraphs" is also supported but with another key (F12, but you can replace it with something else if it doesn't suit you), so that e.g. "<F12>oe" inserts the numeric code for the oe ligature (above 255, some browsers know the numeric codes but not the symbolic entities such as &oelig;).
+
+The script contains a lot of comments to make it largely self-explanatory.

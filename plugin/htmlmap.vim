@@ -536,10 +536,10 @@ imap <buffer> <F12>r% &<Char-35>1009;
 "
 " \x400 &#1024; start of Cyrillic part
 "
-imap <buffer> <F12>YO &<Char-35>1024;
-imap <buffer> <F12>DJ &<Char-35>1025;
-imap <buffer> <F12>GJ &<Char-35>1026;
-imap <buffer> <F12>UE &<Char-35>1027;
+imap <buffer> <F12>YO &<Char-35>1025;
+imap <buffer> <F12>DJ &<Char-35>1026;
+imap <buffer> <F12>GJ &<Char-35>1027;
+imap <buffer> <F12>UE &<Char-35>1028;
 imap <buffer> <F12>DZ &<Char-35>1029;
 imap <buffer> <F12>UI &<Char-35>1030;
 imap <buffer> <F12>JI &<Char-35>1031;

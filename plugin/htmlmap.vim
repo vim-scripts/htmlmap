@@ -554,7 +554,7 @@ imap <buffer> <F12>U) &<Char-35>1038;
 imap <buffer> <F12>CJ &<Char-35>1039;
 imap <buffer> <F12>A= &<Char-35>1040;
 imap <buffer> <F12>B= &<Char-35>1041;
-imap <buffer> <F12>B= &<Char-35>1042;
+imap <buffer> <F12>V= &<Char-35>1042;
 imap <buffer> <F12>G= &<Char-35>1043;
 imap <buffer> <F12>D= &<Char-35>1044;
 imap <buffer> <F12>E= &<Char-35>1045;

@@ -1,5 +1,5 @@
 " --------------------------------------------------------------------
-" "htmlmap.vim"
+" "htmlmap.vim" 1.01pl2
 " VIM script to ease the entry of HTML character entities
 " --------------------------------------------------------------------
 " Copyright (c) 2002 by Antoine Mechelynck, Brussels.
@@ -20,10 +20,37 @@
 " other people to copy, use, and distribute this file in the manner
 " outlined above.
 " --------------------------------------------------------------------
+" The release history has been placed at the end of the file.
+" --------------------------------------------------------------------
 " Compatibility issues: This script was written for gvim 6.0 -- that's
 " the version I use on both Linux and Windows. It ought to work OK on
 " later versions. I don't know if and how it works on which earlier
 " versions.
+" --------------------------------------------------------------------
+" This script maps characters above 128 to their &...; entities.
+" An input method similar to Vim's "digraphs" is supported, but
+" with a differernt prefix (here: F12), so you can avoid translation
+" by using Vim's Ctrl-K digraphs (which will not be remapped).
+" To change the digraph prefix, open this file in Vim, then execute
+" the following command:
+"
+" :1,$s/F12/<your-prefix-key>/
+"
+" (e.g., to use, say, Ctrl-Shift-F7, type:
+" :1,$s/F12/C-S-F7/
+" )
+"
+" We don't bracket F12 by <> in order to replace it also in the
+" comments.
+" --------------------------------------------------------------------
+" The first mapping (F12-Space-Space to &nbsp;) has been disabled by
+" default. Uncomment it if you find it useful.
+" In some future release it might become enabled by default (the change,
+" if and when it happens, will be announced in the corresponding
+" release description at VimOnline).
+" Note that <Ctrl-K><Space><Space> gives <Space> with the high bit set,
+" which happens to be the non-breaking space (since 32+128=160,
+" i.e. 0x20+0x80=0xA0). I found out after defining the mapping.
 " --------------------------------------------------------------------
 " To use this file as a whole, you might for instance add the following
 " (or something similar) to your vimrc :
@@ -72,6 +99,7 @@ let b:htmlmapread=1
 " "wrong" order will fallback to the "normal" single character,
 " except when both are defined (as for example, !I = inverted !
 " but I! = I grave).
+" imap <buffer> <F12><Space><Space> &nbsp;
 imap <buffer> ¡ &iexcl;
 imap <buffer> <F12>!I &iexcl;
 imap <buffer> ¢ &cent;
@@ -240,6 +268,8 @@ imap <buffer> ò &ograve;
 imap <buffer> <F12>o! &ograve;
 imap <buffer> ó &oacute;
 imap <buffer> <F12>o' &oacute;
+imap <buffer> ô &ocirc;
+imap <buffer> <F12>o> &ocirc;
 imap <buffer> õ &otilde;
 imap <buffer> <F12>o? &otilde;
 imap <buffer> ö &ouml;
@@ -1438,3 +1468,21 @@ imap <buffer> <F12>>= &<Char-35>8805;
 " \xfb02 &#64258; Latin small ligature fl
 " \xfb03 &#64259; Latin small ligature ffi
 " \xfb04 &#64260; Latin small ligature ffl
+" --------------------------------------------------------------------
+" Release history:
+" 1.0		Initial release.
+"
+" 1.01		Bugfix for Cyrillic capitals Be and Ve.
+"
+" 1.01pl1	Bugfix for 4 additional rarely-used Cyrillic capitals
+" 		(Yo, Dje, Gje and Ukrainian Ie).
+"
+" 1.01pl2	Improvement: New mapping defined for non-breaking space
+" 		(but disabled by default at the moment).
+" 		Cosmetic improvement: Release history added.
+" 
+" 1.01pl3	Bugfix for circumflex-accented o and O
+"
+" --------------------------------------------------------------------
+" Release history above (newest last)
+" --------------------------------------------------------------------

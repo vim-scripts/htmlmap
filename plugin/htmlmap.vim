@@ -292,6 +292,8 @@ imap <buffer> þ &thorn;
 imap <buffer> <F12>th &thorn;
 imap <buffer> ÿ &yuml;
 imap <buffer> <F12>y: &yuml;
+imap <buffer> € &euro;
+imap <buffer> <F12>eu &euro;
 " 
 " We extend the digraph method to UTF characters above 255;
 " however, we use numerical values because a few older browsers will
@@ -1482,7 +1484,8 @@ imap <buffer> <F12>>= &<Char-35>8805;
 " 		Cosmetic improvement: Release history added.
 " 
 " 1.01pl3	Bugfix for circumflex-accented o and O
-"
+" 
+" 1.01pl4   Added Euro-Sign (Currency) (line 295)
 " --------------------------------------------------------------------
 " Release history above (newest last)
 " --------------------------------------------------------------------
